@@ -26,24 +26,31 @@ formatter.step({
   "name": "User opens home page",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "HomePage_STEPS.user_opens_home_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat step_definitions.HomePage_STEPS.user_opens_home_page(HomePage_STEPS.java:11)\n\tat ✽.User opens home page(file:src/test/resources/features/HomePage.feature:5)\n",
+  "status": "pending"
 });
 formatter.step({
   "name": "User sees My Account button",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "HomePage_STEPS.user_sees_My_Account_button()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Verifies title is PHPTRAVELS | Travel Technology Partner",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "HomePage_STEPS.verifies_title_is_PHPTRAVELS_Travel_Technology_Partner()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
 });

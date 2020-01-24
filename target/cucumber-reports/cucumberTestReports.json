@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-22T03:03:43.481Z",
+        "start_timestamp": "2020-01-23T20:23:33.120Z",
         "line": 4,
         "name": "Verify title of Home Page",
         "description": "",
@@ -13,29 +13,39 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat step_definitions.HomePage_STEPS.user_opens_home_page(HomePage_STEPS.java:11)\n\tat ✽.User opens home page(file:src/test/resources/features/HomePage.feature:5)\n",
+              "duration": 4440005,
+              "status": "pending"
             },
             "line": 5,
             "name": "User opens home page",
-            "match": {},
+            "match": {
+              "location": "HomePage_STEPS.user_opens_home_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 802941,
+              "status": "skipped"
             },
             "line": 6,
             "name": "User sees My Account button",
-            "match": {},
+            "match": {
+              "location": "HomePage_STEPS.user_sees_My_Account_button()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 602116,
+              "status": "skipped"
             },
             "line": 7,
             "name": "Verifies title is PHPTRAVELS | Travel Technology Partner",
-            "match": {},
+            "match": {
+              "location": "HomePage_STEPS.verifies_title_is_PHPTRAVELS_Travel_Technology_Partner()"
+            },
             "keyword": "Then "
           }
         ],
