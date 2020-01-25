@@ -33,7 +33,7 @@ public class AdminCouponPage {
     @FindBy (xpath = "//input[@placeholder='Expiration Date']")
     public WebElement expDateField;
 
-    @FindBy (xpath = "(//td[@class='day '])[4]")
+    @FindBy (xpath = "//td[@class='day '][4]")
     public WebElement endDate;
 
     @FindBy (xpath = "//input[@placeholder='Coupon Code']")
