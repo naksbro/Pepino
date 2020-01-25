@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
+@CucumberOptions (
         features = "src/test/resources/features/",
         glue = "step_definitions",
         plugin = {
@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/cucumberTestReports.json"
         },
-        tags = {"@homePage"},
-        dryRun = true
+        tags = {"@adminDash"}
 )
-public class HomePage_Runner {
+
+public class AdminDashPage_Runner {
 }

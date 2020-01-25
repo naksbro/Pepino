@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
     private static WebDriver driver = null;
-    private static String propertyPath = "/src/test/resources/conf/conf.properties";
+    public static final String propertyPath = "src/test/resources/conf/conf.properties";
 
     public static void initialize (String browser) {
         if (driver != null) return;
@@ -56,7 +56,7 @@ public class Driver {
 
     public static WebDriver getDriver () {
         if (driver != null) return driver;
-        initialize(ConfigReader.readProperty(propertyPath,"browser"));
+        initialize(ConfigReader.readProperty("browser"));
         return driver;
     }
 
