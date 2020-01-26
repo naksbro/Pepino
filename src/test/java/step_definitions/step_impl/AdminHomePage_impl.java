@@ -17,4 +17,17 @@ public class AdminHomePage_impl {
         SeleniumUtils.sendKeys(adminHome.pwField, ConfigReader.readProperty("password"));
         SeleniumUtils.clickElement(adminHome.login_Btn);
     }
+
+    public void clickCouponBtn () {
+        SeleniumUtils.clickElement(adminHome.couponBtn);
+    }
+
+    public void navigateToPage(String pageName){
+        switch (pageName.toLowerCase()){
+            case "coupons":
+                SeleniumUtils.clickElement(adminHome.couponBtn);
+                break;
+        }
+    }
+
 }

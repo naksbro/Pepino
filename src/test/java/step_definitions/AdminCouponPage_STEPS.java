@@ -6,11 +6,10 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.AdminCouponPage;
 import step_definitions.step_impl.AdminCouponPage_impl;
-import step_definitions.step_impl.AdminDashPage_impl;
 import utils.Driver;
 import utils.SeleniumUtils;
 
-public class AdminCouponPage_Steps {
+public class AdminCouponPage_STEPS {
 
     private static WebDriver driver = Driver.getDriver();
 
@@ -24,9 +23,7 @@ public class AdminCouponPage_Steps {
 
     @Then("Verifies new coupon is created")
     public void verifies_new_coupon_is_created() {
-        Assert.assertEquals(SeleniumUtils.getText(couponPage.tableCouponCode), coupon_impl.code);
-        Assert.assertEquals(SeleniumUtils.getText(couponPage.tablePercentage), coupon_impl.percent);
-        Assert.assertEquals(SeleniumUtils.getText(couponPage.tableUses), coupon_impl.uses);
+        Assert.assertTrue(coupon_impl.verifyIfCouponExists());
     }
 
 }

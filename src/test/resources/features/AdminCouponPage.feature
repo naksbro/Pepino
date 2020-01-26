@@ -1,5 +1,6 @@
 @adminCoupon
   Feature: Testing admin coupon page
+    @addingCoupon @smoke @regression @couponTest
     Scenario: Verify coupon is created
       Given User opens admin home page
       When Logs in

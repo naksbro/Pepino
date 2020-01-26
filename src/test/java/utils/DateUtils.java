@@ -1,5 +1,6 @@
 package utils;
 
+import javax.swing.text.DateFormatter;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -19,10 +20,10 @@ public class DateUtils {
         return date.format(now);
     }
 
-    public static String plusFourDays () {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        LocalDate date = LocalDate.now();
-        return formatter.format(date.plusDays(4));
+    public static String plusDays (int plusDay) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate date = LocalDate.now().plusDays(plusDay);
+        return formatter.format(date);
 
     }
 

@@ -12,7 +12,7 @@ public class AdminHomePage {
 
     public AdminHomePage () { PageFactory.initElements(driver, this);}
 
-    @FindBy (xpath = "//input[@name=\"email\"]")
+    @FindBy (xpath = "//input[@name='email']")
     public WebElement emailField;
 
     @FindBy (xpath = "//input[@type='password']")
@@ -20,4 +20,7 @@ public class AdminHomePage {
 
     @FindBy (xpath = "//button[@type='submit']")
     public WebElement login_Btn;
+
+    @FindBy (xpath = " //a[text()=' Coupons']")
+    public WebElement couponBtn;
 }

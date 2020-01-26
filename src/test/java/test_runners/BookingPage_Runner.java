@@ -13,8 +13,9 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/cucumberTestReports.json"
         },
-        tags = {"@adminDash"}
+        tags = {"@bookingPage"},
+        dryRun = false
 )
 
-public class AdminDashPage_Runner {
+public class BookingPage_Runner {
 }

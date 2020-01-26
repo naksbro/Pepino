@@ -2,6 +2,7 @@ package step_definitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.AdminHomePage;
@@ -11,7 +12,7 @@ import utils.ConfigReader;
 import utils.Driver;
 import utils.SeleniumUtils;
 
-public class AdminHomePage_Steps {
+public class AdminHomePage_STEPS {
 
     private static WebDriver driver = Driver.getDriver();
 
@@ -20,10 +21,10 @@ public class AdminHomePage_Steps {
 
     @Given("User opens admin home page")
     public void user_opens_admin_home_page() {
-        Driver.getDriver().get(ConfigReader.readProperty("urlAdmin"));
+        driver.get(ConfigReader.readProperty("urlAdmin"));
     }
 
-    @Given("Logs in")
+    @When("Logs in")
     public void logs_in() {
         SeleniumUtils.waitForVisibility(adminHome.login_Btn);
         adminHomeImpl.adminLogin();
@@ -33,6 +34,11 @@ public class AdminHomePage_Steps {
     public void verifies_title_is_Dashboard() {
         SeleniumUtils.sleep(2000);
         Assert.assertEquals("Dashboard", driver.getTitle());
+    }
+
+    @Then("Navigates to coupon page")
+    public void navigates_to_coupon_page() {
+        adminHomeImpl.clickCouponBtn();
     }
 
 }

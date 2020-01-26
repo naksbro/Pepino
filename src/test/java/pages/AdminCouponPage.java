@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
+import java.util.List;
+
 public class AdminCouponPage {
 
     private static WebDriver driver = Driver.getDriver();
@@ -36,6 +38,12 @@ public class AdminCouponPage {
     @FindBy (xpath = "//td[@class='day '][4]")
     public WebElement endDate;
 
+    @FindBy (xpath = "//input[@value='tours']")
+    public WebElement allTours;
+
+    @FindBy (xpath = "//input[@value='cars']")
+    public WebElement allCars;
+
     @FindBy (xpath = "//input[@placeholder='Coupon Code']")
     public WebElement couponCodeField;
 
@@ -50,4 +58,10 @@ public class AdminCouponPage {
 
     @FindBy (xpath = "(//tr[@class='xcrud-row xcrud-row-0'])[1]/td[6]")
     public WebElement tableUses;
+
+    @FindBy(xpath = "(//tr[contains(@class,'xcrud-row xcrud-row')])/td[4]")
+    public List<WebElement> allCouponCodes;
+
+    public String allCouponsCodes_XPATH = "(//tr[contains(@class,'xcrud-row xcrud-row')])/td[4]";
+
 }
